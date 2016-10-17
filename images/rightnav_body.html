@@ -1,0 +1,182 @@
+<?php
+
+$fajr = explode(",","0,5:58,5:58,5:58,5:59,5:59,5:59,5:59,5:59,5:59,5:58,5:58,5:58,5:58,5:58,5:57,5:57,5:57,5:56,5:56,5:56,5:55,5:55,5:54,5:54,5:53,5:52,5:52,5:51,5:50,5:50,5:49,0");
+$fajr_iqama = explode(",","0,6:18,6:18,6:18,6:19,6:19,6:19,6:19,6:19,6:19,6:18,6:18,6:18,6:18,6:18,6:17,6:17,6:17,6:16,6:16,6:16,6:15,6:15,6:14,6:14,6:13,6:12,6:12,6:11,6:10,6:10,6:09,0");
+$sunrise = explode(",","0,7:19,7:19,7:19,7:19,7:19,7:19,7:19,7:19,7:19,7:19,7:18,7:18,7:18,7:17,7:17,7:17,7:16,7:16,7:15,7:15,7:14,7:13,7:13,7:12,7:11,7:10,7:10,7:09,7:08,7:07,7:06,0");
+$zuhur = explode(",","0,12:00,12:00,12:01,12:01,12:02,12:02,12:03,12:03,12:04,12:04,12:04,12:04,12:05,12:06,12:06,12:06,12:07,12:07,12:07,12:07,12:08,12:08,12:08,12:09,12:09,12:09,12:09,12:09,12:10,12:10,12:10,0");
+$zuhur_iqama = explode(",","0,1:00,1:00,1:00,1:00,1:00,1:00,1:10,1:00,1:15,1:00,1:00,1:00,1:00,1:10,1:00,1:15,1:00,1:00,1:00,1:00,1:10,1:00,1:15,1:00,1:00,1:00,1:00,1:10,1:00,1:15,1:00,0");
+$asr = explode(",","0,3:00,3:00,3:01,3:02,3:03,3:04,3:05,3:06,3:07,3:08,3:09,3:09,3:11,3:12,3:14,3:15,3:16,3:17,3:18,3:19,3:20,3:22,3:23,3:24,3:25,3:26,3:27,3:29,3:30,3:31,3:32,0");
+$asr_iqama = explode(",","0,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,3:30,4:00,4:00,4:00,4:00,4:00,4:00,4:00,4:00,4:00,4:00,0");
+$maghrib = explode(",","0,4:40,4:41,4:42,4:43,4:44,4:45,4:46,4:47,4:48,4:49,4:50,4:50,4:52,4:53,4:54,4:55,4:56,4:57,4:59,5:00,5:01,5:02,5:03,5:04,5:06,5:07,5:08,5:09,5:11,5:12,5:13,0");
+$isha = explode(",","0,6:02,6:03,6:03,6:04,6:05,6:06,6:07,6:08,6:09,6:09,6:10,6:10,6:12,6:13,6:14,6:15,6:16,6:17,6:18,6:19,6:20,6:21,6:22,6:23,6:25,6:26,6:27,6:28,6:29,6:30,6:31,0");
+$isha_iqama = explode(",","0,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,7:00,0");
+
+
+
+
+
+
+$today = date("j");
+$thismonth = date("m");
+$thisyear = date("y");
+
+$fajr_time = $fajr[$today];
+$array_minutes = explode(":",$fajr_time);
+$fajr_iqama_time =  $array_minutes[1]+30;
+
+?>
+
+<td vAlign="top" align="center" width="160">
+	<table id="Table16" cellpadding='0' cellspacing='0' style='border-collapse: collapse;' bordercolor='darkgreen' width="160">
+		<tbody>
+			<tr>
+				<td vAlign="top">
+					<TABLE class="box" cellpadding="0" cellspacing="0"
+						style="border-collapse: collapse;" bordercolor="#111111"
+						width="100%">
+						<TR>
+							<TD class="headerws" colspan="3" align="center">Prayer Times</TD>
+						</TR>
+						<TR bgcolor="#cccc99">
+							<TD class="WhiteBG"></TD>
+							<TD class="WhiteBG" align="center" width="50%">Adhan</TD>
+							<TD class="WhiteBG" align="center" width="50%">Iqama</TD>
+						</TR>
+						<TR>
+							<TD class="PrayerHead">Fajr</TD>
+							<TD class="PrayerHead" align="center" width="50%"><?=$fajr[$today]?></TD>
+							<!--<TD class="PrayerHead" align="center" width="50%"><?=$array_minutes[0]?>:<?=$fajr_iqama_time?></TD>-->
+							<TD class="PrayerHead" align="center" width="50%"><?=$fajr_iqama[$today]?></TD>
+							<!--<TD class="PrayerHead" align="center" width="50%">30 min later</TD>-->
+						</TR>
+						<TR bgcolor="#CCCCCC">
+							<TD class="PrayerHead">Sunrise</TD>
+							<TD class="PrayerHead" align="center" width="50%"><?=$sunrise[$today]?></TD>
+							<TD class="PrayerHead" align="center" width="50%">-</TD>
+						</TR>
+						<TR>
+							<TD class="PrayerHead">Dhuhr</TD>
+							<TD class="PrayerHead" align="center" width="50%"><?=$zuhur[$today]?></TD>
+							<TD class="PrayerHead" align="center" width="50%"><?=$zuhur_iqama[$today]?></TD>
+						</TR>
+						<TR bgcolor="#CCCCCC">
+							<TD class="PrayerHead">Asr</TD>
+							<TD class="PrayerHead" align="center" width="50%"><?=$asr[$today]?></TD>
+							<TD class="PrayerHead" align="center" width="50%"><?=$asr_iqama[$today]?></TD>
+						</TR>
+						<TR>
+							<TD class="PrayerHead">Maghrib</TD>
+							<TD class="PrayerHead" align="center" width="50%"><?=$maghrib[$today]?></TD>
+							<TD class="PrayerHead" align="center" width="50%">5 min later</TD>
+						</TR>
+						<TR bgcolor="#CCCCCC">
+							<TD class="PrayerHead">Isha</TD>
+							<TD class="PrayerHead" align="center" width="50%"><?=$isha[$today]?></TD>
+                            <!--<TD class="PrayerHead" align="center" width="50%">-</TD>-->
+							<TD class="PrayerHead" align="center" width="50%"><?=$isha_iqama[$today]?></TD>
+                            <!--<TD class="PrayerHead" align="center" width="50%">5 min later</TD>-->
+						</TR>
+						<TR>
+							<TD class="PrayerHead">Juma</TD>
+							<TD class="PrayerHead" align="center" width="50%">1:10</TD>
+							<TD class="PrayerHead" align="center" width="50%">-</TD>
+						</TR>
+					</TABLE>
+				</td>
+		    </tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class='PrayerHead'>Khutba starts at 1:10</td>
+			</tr>
+			<tr>
+				<td class='PrayerHead'>Dhuhr on sat & sun at 1:15</td>
+			</tr>
+			<tr>
+				<td class='PrayerHead'>&nbsp</td>
+			</tr>
+			<tr>
+				<td class="Custom1"><a href="documents/Schedule<?=$thismonth?>11.pdf">Calendar/Prayer Schedule</a></td>
+			</tr>
+
+			<!--<tr>
+				<td class="Custom1"><a href="documents/Calendar<?=$thismonth?>09.pdf">Calendar</a></td>			           </tr>-->
+			<!--<tr>
+				<td><a href="documents/Ramadan_Activities.pdf">Ramadan Program</a></td>
+			</tr>
+			<tr>
+				<td><a href="documents/EidUlFitr1428_1.pdf">Eid-Ul-Fitr Prayer</a></td>
+			</tr>
+			<tr>
+				<td><a href="eidprogram.html#eidceleb">Eid Celebration</a></td>
+			</tr>-->
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td><a href="http://www.discoverislam.com" target=new class="FormRed">Discover Islam</a></td>
+			</tr>
+			<tr>
+				<td><a href="http://www.whyislam.org/Submission/Prophethood/JesusPeaceBeUponHim/WhowasJesuspbuh/tabid/226/Default.aspx" target=new class="FormRed">Muslims Love Jesus</a></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+   		    <tr>
+				<td class="Custom1" >
+						<a href="icbnforms.html">Download Forms </a><img src="images/icon_form.gif"/>
+				</td>
+			</tr>
+   		    <tr>
+				<td class="Custom1" >
+						&nbsp;<br>
+				</td>
+			</tr>
+   		    <tr>
+				<td class="Custom1" >
+						<a href="justmoved.html" class="FormRed">Just Moved ?? - Join our Community </a>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+
+			<tr>
+				<td>
+					<Table cellspacing="1" cellpadding="1" bgcolor="#ffffff" border="0"  width="100%">
+						<tr bgcolor="#cccc99" valign="top"><td colspan="2" class="heavyw"  align="center" nowrap>&nbsp;&nbsp;<b><font color="black">Verse from Quran </font></b></td></tr>
+						<tr bgcolor="#ffffff">
+							<td width="" colspan="2" >
+								<span lang="EN" style="font-family: Verdana;">
+										<!--<font size="2">O ye who believe! Fasting is prescribed to you as it was prescribed to those before you, that ye may (learn) self-restraint. Qur'an (2:183)</font>-->
+									<font size="2">Our Lord! Impose not on us that which we have not the strength to bear, grant us forgiveness and have mercy on us. You are our Protector. Help us against those who deny the truth. Qur'an (2:286).</font>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<Table cellspacing="1" cellpadding="1" bgcolor="#ffffff" border="0"  width="100%">
+						<tr bgcolor="#cccc99" valign="top"><td colspan="2" class="heavyw"  align="center" nowrap>&nbsp;&nbsp;<b><font color="black">Hadith </font></b></td></tr>
+						<tr bgcolor="#ffffff">
+							<td width="" colspan="2" >
+								<span lang="EN" style="font-family: Verdana;">
+Prophet Mohammed (Peace be upon him) said: "Ask yoruself for a decision, ask your heart for a decision (saying it three times).Righteousness is that with which the soul is tranquil and the heart is tranquil, but sin is that which rouses suspecion in the soul and is perplexing in the breast, even if people give you a decision in its favour." [Mishkat]
+<!--
+Abdullah bin Amr bin Al-as (May Allah be pleased with them) reported: A man asked the Messenger of Allah (PBUH): "Which act in Islam is the best?" He (PBUH) replied, "To give food, and to greet everyone, whether you know or you do not." [Bukhari & Muslim]
+-->
+									<!--Jabir (May Allah be pleased with him) reported: The Messenger of Allah (PBUH) said, "Do not invoke curses on yourself or on your children or on your possessions lest you should happen to do it at a moment when the supplications are accepted, and your prayer might be granted. [Muslim].
+Narrated Aisha: With the start of the last ten days of Ramadan, the Prophet used to tighten his waist belt (i.e. work hard) and used to pray all the night, and used to keep his family awake for the prayers.[Bukhari]
+-->
+							    </span>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</td>

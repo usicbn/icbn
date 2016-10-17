@@ -1,0 +1,166 @@
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;
+}
+
+img
+{  border-style: none;
+}
+
+b{font-size: 110%;}
+em{color: red;}
+
+#maincontainer{
+width: 1100px; /*Width of main container*/
+margin: 0 auto; /*Center container on page*/
+background-color:white;
+#border: 3px coral solid;
+#border-style: dashed;
+	
+}
+
+.shadow {
+    -moz-box-shadow: 3px 3px 4px #000;
+    -webkit-box-shadow: 3px 3px 4px #000;
+    box-shadow: 3px 3px 4px #000;
+    /* For IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+    /* For IE 5.5 - 7 */
+   filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+}
+
+.shadow2 {
+box-shadow: 7px 7px 8px #000000;
+-webkit-box-shadow: 7px 7px 8px #000000;
+-moz-box-shadow: 7px 7px 8px #000000;
+
+filter: progid:DXImageTransform.Microsoft.dropShadow(color=#000000, offX=7, offY=7, positive=true); 
+}
+
+.shadowblur2{
+box-shadow: -7px 7px 8px #000000;
+-webkit-box-shadow: -7px 7px 8px #000000;
+-moz-box-shadow: -7px 7px 8px #000000;
+filter: progid:DXImageTransform.Microsoft.dropShadow(color=#000000, offX=-7, offY=-7, positive=true); 
+}
+
+
+
+.body-style{
+     #background-image:url(../images/icbn_watermark.png);
+	#background-image:url(../images/pattern3.jpg);
+	#background-repeat:repeat;
+	#border: 1px white solid;
+
+}
+
+
+#header{
+margin-top:16px;
+background:#2f2f2f url(../images/headerbg1_m.jpg) top left repeat-x;
+#color:#fff;
+}
+
+#header .bgbl{
+background:url(../images/logo_new.gif) no-repeat;
+#background:url(../images/headerbg_bl.jpg) no-repeat;
+#background-size: 100px 100px;
+#background-position: center top;
+#margin-left: 20px;
+
+background-position:0px 100%;
+#background-size: 100%;
+height:auto!important;
+height:120px;
+min-height:120px;
+#padding:0px 24px 26px 24px;
+position:relative;
+}
+
+#header .bgleft{
+#background:url(../images/headerbg_m.jpg) top left no-repeat;
+}
+#header .bgright{
+background:url(../images/headerbg1_r.jpg) top right no-repeat;
+
+} 
+
+#topsection{
+background:url(../images/headerbg_bl.jpg) repeat;
+#background: #EAEAEA;
+margin-top:16px;
+height: 90px; /*Height of top section*/
+#border: 3px green solid;
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+}
+
+#contentwrapper{
+float: left;
+width: 1100px;
+#border: 1px red solid;
+padding: 0px;
+margin:0px;
+
+}
+
+#contentcolumn{
+
+#margin: 2px 190px 0 180px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+margin: 2px 190px 0 0px;
+#border: 1px orange solid;
+#background: #cccccc;
+padding: 5px;
+}
+
+#leftcolumn{
+float: left;
+#width: 180px; /*Width of left column in pixel*/
+width: 0px;
+margin-left: -1100px; /*Set margin to that of -(MainContainerWidth)*/
+margin-top:0px;
+#background: #C8FC98;
+#border: 1px pink solid;
+}
+
+#rightcolumn{
+float: left;
+width: 190px; /*Width of right column 180*/
+margin-left: -190px; /*Set left margin to -(RightColumnWidth) 195*/
+#background: #C8FC98;
+#border: 1px pink solid;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #FFF;
+text-align: center;
+padding: 4px 0px;
+#margin: 0px;
+#border: 0px white solid;
+margin-bottom:16px;
+
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 1px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+#border: 1px green solid;
+}
+
+.righttube{
+margin: 0px; /*Margins for inner DIV inside each column (to provide padding)*/
+#margin-top: 10;
+padding: 0px 0px;
+#border: 1px green solid;
+}
