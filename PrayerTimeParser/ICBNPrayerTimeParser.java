@@ -132,16 +132,14 @@ public class ICBNPrayerTimeParser {
 				
 				if(lines>= daysInMonth) break;
 
-				str = str.replaceAll("  ","");
+				str = str.replaceAll("\\s+\t",",");
+				System.out.println(str);
 					
 				//TO:DO validate file for proper format
-				String[] prayers = str.split("\\s+");
+				String[] prayers = str.split(",");
 				System.out.println("split:"+ prayers.length);
 				
-
-				
-
-				for(int p=0; p<prayers.length; p++){
+				for(int p=0; p<6; p++){
 					prayerTimes[p] = prayerTimes[p].append(prayers[p]).append(",");
 				}
 

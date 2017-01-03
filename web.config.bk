@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+     <system.webServer>
+			<httpErrors errorMode="Detailed" existingResponse="PassThrough"/>
+            <staticContent>
+				  <mimeMap fileExtension=".json" mimeType="application/json" />
+				  <mimeMap fileExtension=".html" mimeType="text/html" />
+         </staticContent>
+
+      system.webServer>
+
+</configuration>
